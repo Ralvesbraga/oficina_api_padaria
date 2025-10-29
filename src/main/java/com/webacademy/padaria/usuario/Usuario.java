@@ -30,6 +30,9 @@ public class Usuario {
 
     private String telefone;
 
+    @Enumerated(EnumType.STRING)
+    private ETipoUsuario tipoUsuario;
+
     @Column(nullable = false)
     private LocalDate dataCadastro;
     
@@ -80,4 +83,14 @@ public class Usuario {
     public void setDataCadastro(LocalDate dataCadastro) {
         this.dataCadastro = dataCadastro;
     }
+
+    public ETipoUsuario getTipoUsuario() {
+        return tipoUsuario;
+    }
+
+    public void setTipoUsuario(ETipoUsuario tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
+    }
+
+
 }
