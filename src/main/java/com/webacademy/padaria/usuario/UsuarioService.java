@@ -1,6 +1,7 @@
 package com.webacademy.padaria.usuario;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -11,28 +12,42 @@ import com.webacademy.padaria.crudServiceInterfaces.ISaveService;
 @Service
 public class UsuarioService implements IGetService<Usuario>, ISaveService<Usuario>, IDeleteService {
 
-    @Override
+    private final UsuarioRepository repository;
+
+    public UsuarioService(UsuarioRepository repository) {
+        this.repository = repository;
+    }
+
     public void delete(Long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'delete'");
+        Optional<Usuario> usuarioOptional = repository.findById(id);
+        if(usuarioOptional.isPresent()) {
+            var usuario = usuarioOptional.get();
+            repository.delete(usuario);
+            return;
+        }
+        return;
     }
 
-    @Override
     public Usuario save(Usuario objeto) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'save'");
+        var usuario = repository.save(objeto);
+        return usuario;
     }
 
-    @Override
     public Usuario get(Long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'get'");
+        var usuarioOptional = repository.findById(id);
+        if (usuarioOptional.isPresent()) {
+            return usuarioOptional.get();
+        }
+        return null;
     }
 
-    @Override
     public List<Usuario> get(String termoBusca) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'get'");
+        if (termoBusca != null && !termoBusca.isBlank()) {
+            var registros = repository.busca(termoBusca);
+            return registros;
+        }
+        var registros = repository.findAll();
+        return registros;
     }
     
 }
