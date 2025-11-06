@@ -1,0 +1,24 @@
+-- 1. Usuário Admin
+INSERT INTO usuarios (nome, email, senha, telefone, data_cadastro, tipo_usuario)
+VALUES 
+    ('Ana Paula Gerente', 'ana.paula@padaria.com', 'senhaAdmin123', '5511999990001', '2025-10-20', 'ADMIN');
+
+-- 2. Usuário Cliente (Completo)
+INSERT INTO usuarios (nome, email, senha, telefone, data_cadastro, tipo_usuario)
+VALUES 
+    ('Carlos Eduardo Cliente', 'carlos.eduardo@email.com', 'senhaCliente456', '5521988880002', '2025-10-20', 'CLIENTE');
+
+-- 3. Usuário Vendedor
+INSERT INTO usuarios (nome, email, senha, telefone, data_cadastro, tipo_usuario)
+VALUES 
+    ('Mariana Vendedora', 'mariana.vendas@padaria.com', 'senhaVendas789', '5531977770003', '2025-10-19', 'VENDEDOR');
+
+-- 4. Usuário Cliente (Mínimo de informações - omitindo telefone e usando data anterior)
+INSERT INTO usuarios (nome, email, senha, data_cadastro, tipo_usuario)
+VALUES 
+    ('Pedro Sem Telefone', 'pedro.semtel@email.com', 'senhaBasica000', '2025-09-15', 'CLIENTE');
+    
+-- 5. Usuário Admin (apenas campos obrigatórios + tipo)
+INSERT INTO usuarios (nome, email, senha, tipo_usuario)
+VALUES 
+    ('Fernanda Supervisora', 'fernanda.sup@padaria.com', 'senhaSuperv111', 'ADMIN');

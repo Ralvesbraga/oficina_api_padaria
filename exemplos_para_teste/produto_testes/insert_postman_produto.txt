@@ -1,0 +1,9 @@
+{
+  "nome": "Pão Francês",
+  "descricao": "Pão tradicional fresco, assado na hora.",
+  "ativo": true,
+  "preco": 0.85,
+  "categoria": {
+    "id": 1
+  }
+}

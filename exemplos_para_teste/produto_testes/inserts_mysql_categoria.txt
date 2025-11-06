@@ -1,0 +1,19 @@
+-- 1. Categoria de Pães
+INSERT INTO categorias (nome, descricao) 
+VALUES ('Pães', 'Variedade de pães frescos, pão francês, pão de forma e pães integrais.');
+
+-- 2. Categoria de Bolos e Tortas
+INSERT INTO categorias (nome, descricao) 
+VALUES ('Bolos e Tortas', 'Bolos caseiros, tortas doces e salgadas.');
+
+-- 3. Categoria de Salgados
+INSERT INTO categorias (nome, descricao) 
+VALUES ('Salgados', 'Coxinha, empada, pão de queijo e outros salgados assados e fritos.');
+
+-- 4. Categoria de Doces
+INSERT INTO categorias (nome, descricao) 
+VALUES ('Doces', 'Brigadeiros, sonhos, mousses e outros doces de confeitaria.');
+
+-- 5. Categoria de Bebidas
+INSERT INTO categorias (nome, descricao) 
+VALUES ('Bebidas', 'Sucos, refrigerantes, cafés e chás.');

@@ -1,0 +1,19 @@
+-- 1. Um pão (ativo=true por padrão, pois omitimos a coluna)
+INSERT INTO produtos (nome, descricao, preco, categoria_id) 
+VALUES ('Pão Francês', 'Unidade de 50g', 0.85, 1);
+
+-- 2. Um bolo (ativo=true explícito)
+INSERT INTO produtos (nome, descricao, ativo, preco, categoria_id) 
+VALUES ('Bolo de Chocolate', 'Fatia generosa com cobertura', 8.50, 2);
+
+-- 3. Um salgado (sem descrição)
+INSERT INTO produtos (nome, ativo, preco, categoria_id) 
+VALUES ('Coxinha de Frango', true, 7.00, 3);
+
+-- 4. Uma bebida (exemplo de produto inativo)
+INSERT INTO produtos (nome, descricao, ativo, preco, categoria_id) 
+VALUES ('Suco de Uva Integral', 'Garrafa de 1L', false, 12.00, 5);
+
+-- 5. Um item de frios
+INSERT INTO produtos (nome, descricao, ativo, preco, categoria_id) 
+VALUES ('Queijo Muçarela', 'Peça de 1kg', true, 45.90, 4);
