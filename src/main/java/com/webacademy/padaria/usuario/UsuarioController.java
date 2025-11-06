@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.webacademy.padaria.crudControllerInterfaces.IDeleteController;
-import com.webacademy.padaria.crudControllerInterfaces.IGetController;
-import com.webacademy.padaria.crudControllerInterfaces.ISaveController;
+import com.webacademy.padaria.interfaces.crudControllerInterfaces.IDeleteController;
+import com.webacademy.padaria.interfaces.crudControllerInterfaces.IGetController;
+import com.webacademy.padaria.interfaces.crudControllerInterfaces.ISaveController;
 
 @RestController
 @RequestMapping("/usuarios")

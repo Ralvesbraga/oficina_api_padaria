@@ -5,9 +5,9 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.webacademy.padaria.crudServiceInterfaces.IDeleteService;
-import com.webacademy.padaria.crudServiceInterfaces.IGetService;
-import com.webacademy.padaria.crudServiceInterfaces.ISaveService;
+import com.webacademy.padaria.interfaces.crudServiceInterfaces.IDeleteService;
+import com.webacademy.padaria.interfaces.crudServiceInterfaces.IGetService;
+import com.webacademy.padaria.interfaces.crudServiceInterfaces.ISaveService;
 
 @Service
 public class UsuarioService implements IGetService<Usuario>, ISaveService<Usuario>, IDeleteService {
